@@ -2,6 +2,22 @@
 [![Current Version](https://badgen.net/npm/v/redlock)](https://npm.im/redlock)
 [![Supported Node.js Versions](https://badgen.net/npm/node/redlock)](https://npm.im/redlock)
 
+# Why this fork?
+
+https://github.com/mike-marcacci/node-redlock contains changes that have not been released to npm yet (at the time of writing, latest version is 5.0.0-beta.2 - 2022-03-06).
+
+This fork contains the dist directory so it can be used directly without having to wait for a new npm release.
+
+How to use?
+
+In your package.json reference the git repo with the commit hash:
+
+```JSON
+  "dependencies": {
+    "redlock": "https://github.com/tkrotoff/node-redlock.git#47633c1"
+  },
+```
+
 # Redlock
 
 This is a node.js implementation of the [redlock](http://redis.io/topics/distlock) algorithm for distributed redis locks. It provides strong guarantees in both single-redis and multi-redis environments, and provides fault tolerance through use of multiple independent redis instances or clusters.
